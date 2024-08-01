@@ -3,7 +3,7 @@ import React from 'react';
 const Contact = () => (
   <section id="contact">
     <h2>Contact</h2>
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+    <form action="mailto:asearerdev@gmail.com" method="post" enctype="text/plain">
       <label htmlFor="name">Name:</label>
       <input type="text" id="name" name="name" required />
       <label htmlFor="email">Email:</label>

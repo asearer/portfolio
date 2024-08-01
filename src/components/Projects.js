@@ -1,4 +1,5 @@
 import React from 'react';
+import './Projects.css'; // Ensure your styles are imported
 
 const ProjectCard = ({ title, description, techStack, liveDemo, sourceCode }) => (
   <div className="project-card">
@@ -21,9 +22,59 @@ const Projects = () => (
         liveDemo="https://example.com"
         sourceCode="https://github.com/example/repo"
       />
-      {/* Add more ProjectCard components as needed */}
+      <ProjectCard
+        title="Project 2"
+        description="Description of Project 2"
+        techStack="HTML, CSS, JavaScript"
+        liveDemo="https://example.com"
+        sourceCode="https://github.com/example/repo"
+      />
+      <ProjectCard
+        title="Project 3"
+        description="Description of Project 3"
+        techStack="Python, Django"
+        liveDemo="https://example.com"
+        sourceCode="https://github.com/example/repo"
+      />
+      <ProjectCard
+        title="Project 4"
+        description="Description of Project 4"
+        techStack="Node.js, Express"
+        liveDemo="https://example.com"
+        sourceCode="https://github.com/example/repo"
+      />
+      <ProjectCard
+        title="Project 5"
+        description="Description of Project 5"
+        techStack="Ruby on Rails"
+        liveDemo="https://example.com"
+        sourceCode="https://github.com/example/repo"
+      />
+      <ProjectCard
+        title="Project 6"
+        description="Description of Project 6"
+        techStack="Vue.js"
+        liveDemo="https://example.com"
+        sourceCode="https://github.com/example/repo"
+      />
+      <ProjectCard
+        title="Project 7"
+        description="Description of Project 7"
+        techStack="Swift, iOS"
+        liveDemo="https://example.com"
+        sourceCode="https://github.com/example/repo"
+      />
+      <ProjectCard
+        title="Project 8"
+        description="Description of Project 8"
+        techStack="Java, Spring Boot"
+        liveDemo="https://example.com"
+        sourceCode="https://github.com/example/repo"
+      />
     </div>
   </section>
 );
 
 export default Projects;
+
+
