@@ -1,0 +1,33 @@
+#blog {
+  padding: 2rem;
+}
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.blog-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #f9f9f9;
+  width: 300px; /* Adjust as needed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card h3 a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.blog-card h3 a:hover {
+  text-decoration: underline;
+}
+
+.blog-card p {
+  margin: 0.5rem 0;
+}
+
