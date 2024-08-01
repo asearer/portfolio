@@ -18,12 +18,12 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" element={<><HeroSection /><About /><Skills /><Projects /><Blog /></>} />
-        <Route path="/about" element={<><HeroSection /><About /><Skills /><Projects /><Blog /></>} />
-        <Route path="/skills" element={<><HeroSection /><Skills /><Projects /><Blog /></>} />
-        <Route path="/projects" element={<><HeroSection /><Projects /><Blog /></>} />
-        <Route path="/blog" element={<><HeroSection /><Blog /></>} />
-        <Route path="/contact" element={<><HeroSection /><Contact /></>} />
+        <Route path="/" element={<HeroSection />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>
@@ -31,6 +31,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
