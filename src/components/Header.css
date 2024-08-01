@@ -1,0 +1,52 @@
+/* Header.css */
+.neumorphic-card {
+    background: #e0e5ec;
+    border-radius: 10px;
+    box-shadow: 8px 8px 15px #a3b1c6, -8px -8px 15px #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  li {
+    display: inline;
+  }
+  
+  .neumorphic-button {
+    background: #e0e5ec;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 6px 6px 10px #a3b1c6, -6px -6px 10px #ffffff;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .neumorphic-button:hover {
+    box-shadow: inset 4px 4px 8px #a3b1c6, inset -4px -4px 8px #ffffff;
+  }
+  
+  .neumorphic-button:active {
+    box-shadow: inset 2px 2px 4px #a3b1c6, inset -2px -2px 4px #ffffff;
+  }
+  

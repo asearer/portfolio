@@ -1,11 +1,16 @@
 import React from 'react';
+import './HeroSection.css';
 
-const HeroSection = () => (
-  <section className="hero">
-    <h1>Innovative Software Developer</h1>
-    <p>Specializing in JavaScript, HTML, CSS, and More</p>
-    <a href="#projects" className="cta-button">View My Work</a>
-  </section>
-);
+const HeroSection = () => {
+  return (
+    <div className="hero-section">
+      <h2>Welcome to My Portfolio</h2>
+      <p>I'm a passionate software developer specializing in modern web technologies.</p>
+      <button>Contact Me</button>
+    </div>
+  );
+};
 
 export default HeroSection;
+
+

@@ -1,14 +1,11 @@
 import React from 'react';
+import './Footer.css'; // Ensure your styles are imported
 
 const Footer = () => (
-  <footer>
-    <p>&copy; {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
-    <div className="social-links">
-      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">GitHub</a>
-      {/* Add other social links as needed */}
-    </div>
+  <footer className="neumorphic-card">
+    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
   </footer>
 );
 
 export default Footer;
+
