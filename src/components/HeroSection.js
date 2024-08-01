@@ -18,9 +18,9 @@ const HeroSection = () => {
 
       {showContact && (
         <div className="contact-info">
-          <p>Email: example@example.com</p>
+          <p>Email: asearerdev@gmail.com</p>
           <p>Phone: (123) 456-7890</p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">Your LinkedIn Profile</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/alonzasearer/" target="_blank" rel="noopener noreferrer">Your LinkedIn Profile</a></p>
         </div>
       )}
     </div>
