@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css'; // Ensure your styles are imported
+import './Header.css';
 
 const Header = () => (
   <header className="neumorphic-card">

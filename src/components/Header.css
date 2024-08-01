@@ -1,52 +1,44 @@
-/* Header.css */
+/* src/components/Header.css */
 .neumorphic-card {
-    background: #e0e5ec;
-    border-radius: 10px;
-    box-shadow: 8px 8px 15px #a3b1c6, -8px -8px 15px #ffffff;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 15px;
-  }
-  
-  li {
-    display: inline;
-  }
-  
-  .neumorphic-button {
-    background: #e0e5ec;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 6px 6px 10px #a3b1c6, -6px -6px 10px #ffffff;
-    color: #333;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 10px 20px;
-    transition: all 0.3s ease;
-    text-decoration: none;
-  }
-  
-  .neumorphic-button:hover {
-    box-shadow: inset 4px 4px 8px #a3b1c6, inset -4px -4px 8px #ffffff;
-  }
-  
-  .neumorphic-button:active {
-    box-shadow: inset 2px 2px 4px #a3b1c6, inset -2px -2px 4px #ffffff;
-  }
-  
+  /* Example neumorphic styles */
+  background: #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2),
+              -5px -5px 15px rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin: 10px;
+}
+
+nav h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+.neumorphic-button {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+              inset -5px -5px 10px rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.neumorphic-button:hover {
+  background: #e0e0e0;
+  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.2),
+              inset -3px -3px 7px rgba(255, 255, 255, 0.9);
+}
+
