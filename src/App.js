@@ -9,6 +9,9 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
 
+// Import FontAwesome CSS
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 function App() {
   return (
     <div className="App">
@@ -25,4 +28,5 @@ function App() {
 }
 
 export default App;
+
 

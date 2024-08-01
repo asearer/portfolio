@@ -1,6 +1,10 @@
 import React from 'react';
 import './About.css'; // Ensure this CSS file includes modal styles
 
+// Import FontAwesome icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload, faTimes } from '@fortawesome/free-solid-svg-icons';
+
 const About = () => {
   const handleDownloadClick = () => {
     const modal = document.getElementById('downloadModal');
@@ -25,16 +29,24 @@ const About = () => {
     <div className="about">
       <h1>About Me</h1>
       <p>Here is some information about me...</p>
-      <button className="modal-button" onClick={handleDownloadClick}>Download Resume</button>
+      <button className="modal-button" onClick={handleDownloadClick}>
+        <FontAwesomeIcon icon={faDownload} /> Download Resume
+      </button>
 
       {/* Modal for download options */}
       <div id="downloadModal" className="modal">
         <div className="modal-content">
-          <span className="close" onClick={handleCloseModal}>&times;</span>
+          <span className="close" onClick={handleCloseModal}>
+            <FontAwesomeIcon icon={faTimes} />
+          </span>
           <h2>Download Resume</h2>
           <p>Select a format to download:</p>
-          <button className="modal-button" onClick={() => handleDownload('pdf')}>Download PDF</button>
-          <button className="modal-button" onClick={() => handleDownload('docx')}>Download DOCX</button>
+          <button className="modal-button" onClick={() => handleDownload('pdf')}>
+            <FontAwesomeIcon icon={faDownload} /> Download PDF
+          </button>
+          <button className="modal-button" onClick={() => handleDownload('docx')}>
+            <FontAwesomeIcon icon={faDownload} /> Download DOCX
+          </button>
         </div>
       </div>
     </div>

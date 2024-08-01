@@ -25,7 +25,8 @@
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex; /* Changed from inline-block to inline-flex for better icon alignment */
+  align-items: center; /* Centers text and icon vertically */
   font-size: 16px;
   margin: 5px 2px;
   cursor: pointer;
@@ -43,6 +44,12 @@
   line-height: 1.6;
 }
 
+.contact-info p {
+  display: flex;
+  align-items: center; /* Centers icons and text vertically */
+  margin: 10px 0;
+}
+
 .contact-info a {
   color: #007bff;
   text-decoration: none;
@@ -51,5 +58,12 @@
 .contact-info a:hover {
   text-decoration: underline;
 }
+
+.contact-info .fa-envelope,
+.contact-info .fa-phone,
+.contact-info .fa-linkedin {
+  margin-right: 8px; /* Adds space between icon and text */
+}
+
 
   
