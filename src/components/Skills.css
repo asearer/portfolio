@@ -1,0 +1,24 @@
+/* Add these styles to ensure tooltips are visible and styled properly */
+
+.react-tooltip {
+  position: absolute;
+  z-index: 9999; /* Ensure it appears above other content */
+  background-color: #333; /* Dark background for better contrast */
+  color: #fff; /* White text */
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Optional: Add an arrow pointing to the tooltip trigger */
+.react-tooltip:after {
+  content: '';
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
