@@ -1,3 +1,12 @@
+/* Container for the skills list */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap; /* Allows the cards to wrap to the next line if there's not enough space */
+  justify-content: space-around; /* Distributes space evenly between items */
+  gap: 20px; /* Space between cards */
+  padding: 20px; /* Padding around the container */
+}
+
 /* Neumorphism styling for the skill items */
 .skill-item {
   background: #e0e0e0; /* Light background color */
@@ -6,7 +15,8 @@
   padding: 15px;
   display: flex;
   align-items: center;
-  margin: 10px;
+  width: 150px; /* Fixed width to ensure consistency */
+  height: 100px; /* Fixed height for uniformity */
   transition: all 0.3s ease;
 }
 
@@ -28,4 +38,5 @@
 .skill-item {
   transition: box-shadow 0.3s ease;
 }
+
 
