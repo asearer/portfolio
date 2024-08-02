@@ -11,12 +11,12 @@ import {
 import './Skills.css';
 
 const skills = [
-  { name: 'JavaScript', icon: faJsSquare, description: 'A versatile programming language primarily used for web development.' },
-  { name: 'React', icon: faReact, description: 'A JavaScript library for building user interfaces, developed by Facebook.' },
-  { name: 'Node.js', icon: faNodeJs, description: 'A runtime environment that allows you to run JavaScript on the server side.' },
-  { name: 'HTML', icon: faHtml5, description: 'The standard markup language for creating web pages.' },
-  { name: 'CSS', icon: faCss3Alt, description: 'A style sheet language used to describe the presentation of a document written in HTML or XML.' },
-  { name: 'Python', icon: faPython, description: 'A high-level programming language known for its readability and versatility.' },
+  { name: 'JavaScript', icon: faJsSquare, description: 'Experienced in the JavaScript programming language.' },
+  { name: 'React', icon: faReact, description: 'Experienced in the React library for frontend development.' },
+  { name: 'Node.js', icon: faNodeJs, description: 'Experienced in the Node.js programming language for server side development.' },
+  { name: 'HTML', icon: faHtml5, description: 'Experienced in the HTML markup language used to create and structure web pages.' },
+  { name: 'CSS', icon: faCss3Alt, description: 'Experienced in the Cascading Style Sheets (CSS) language used to style web pages.' },
+  { name: 'Python', icon: faPython, description: 'Experienced in the Python programming language for data analysis, machine learning, and web development.' },
 ];
 
 const Skills = () => (
