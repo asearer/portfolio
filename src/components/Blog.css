@@ -9,12 +9,21 @@
   justify-content: center;
 }
 
+.blog-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 350px; /* Adjust as needed */
+}
+
 .blog-card {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
   background: #f9f9f9;
-  width: 300px; /* Adjust as needed */
+  width: 100%; /* Ensure it takes full width of its container */
+  max-width: 300px; /* Adjust as needed */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 

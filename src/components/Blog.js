@@ -42,22 +42,46 @@ const Blog = () => {
     <section id="blog">
       <h2>Blog</h2>
       <div className="blog-container">
-        {posts.length === 0 ? (
-          <p>No blog posts available.</p>
-        ) : (
-          posts.map((post, index) => (
-            <div key={index} className="blog-card">
-              <h3><a href={post.link} target="_blank" rel="noopener noreferrer">{post.title}</a></h3>
-              <p>{post.description}</p>
-              <p><em>Published on: {new Date(post.pubDate).toLocaleDateString()}</em></p>
-            </div>
-          ))
-        )}
+        {/* Existing feed section */}
+        <div className="blog-section">
+          <h3>Feed Section</h3>
+          {posts.length === 0 ? (
+            <p>No blog posts available.</p>
+          ) : (
+            posts.map((post, index) => (
+              <div key={index} className="blog-card">
+                <h3><a href={post.link} target="_blank" rel="noopener noreferrer">{post.title}</a></h3>
+                <p>{post.description}</p>
+                <p><em>Published on: {new Date(post.pubDate).toLocaleDateString()}</em></p>
+              </div>
+            ))
+          )}
+        </div>
+
+        {/* Additional section 1 */}
+        <div className="blog-section">
+          <h3>Additional Section 1</h3>
+          <div className="blog-card">
+            <h3>Placeholder Title 1</h3>
+            <p>Placeholder for additional blog posts or content.</p>
+          </div>
+        </div>
+
+        {/* Additional section 2 */}
+        <div className="blog-section">
+          <h3>Additional Section 2</h3>
+          <div className="blog-card">
+            <h3>Placeholder Title 2</h3>
+            <p>Placeholder for additional blog posts or content.</p>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
 export default Blog;
+
+
 
 
