@@ -14,23 +14,27 @@ import './Skills.css';
 const skills = [
   {
     name: 'Certification 1',
-    image: 'path-to-certification1-image.jpg',
-    description: 'Description of Certification 1, detailing what skills or knowledge were acquired.'
+    image: '/datavis.png',
+    description: 'Description of Certification 1, detailing what skills or knowledge were acquired.',
+    type: 'certification'
   },
   {
     name: 'Certification 2',
-    image: 'path-to-certification2-image.jpg',
-    description: 'Description of Certification 2, outlining the expertise gained or validated through this certification.'
+    image: '/frontendlib.png',
+    description: 'Description of Certification 2, outlining the expertise gained or validated through this certification.',
+    type: 'certification'
   },
   {
     name: 'Certification 3',
-    image: 'path-to-certification3-image.jpg',
-    description: 'Description of Certification 3, including the scope and relevance of the certification in your field.'
+    image: '/responsive-web-design.png',
+    description: 'Description of Certification 3, including the scope and relevance of the certification in your field.',
+    type: 'certification'
   },
   {
     name: 'Certification 4',
-    image: 'path-to-certification4-image.jpg',
-    description: 'Description of Certification 4, specifying the skills and knowledge covered by this certification.'
+    image: '/umass.png',
+    description: 'Description of Certification 4, specifying the skills and knowledge covered by this certification.',
+    type: 'certification'
   },
   {
     name: 'JavaScript',
@@ -81,17 +85,19 @@ const Skills = () => {
       <div className="skills-list">
         {skills.map((skill, index) => (
           <div 
-            className="skill-item" 
+            className={`skill-item ${skill.type === 'certification' ? 'certification-item' : ''}`} 
             key={index}
             onClick={() => openModal(skill)}
           >
-            <div className="skill-icon-container">
-              {skill.icon ? (
+            {skill.type === 'certification' ? (
+              <div className="certification-image-container">
+                <img src={skill.image} alt={skill.name} className="certification-image" />
+              </div>
+            ) : (
+              <div className="skill-icon-container">
                 <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
-              ) : (
-                <div className="skill-icon-placeholder"></div>
-              )}
-            </div>
+              </div>
+            )}
             <div className="skill-info">
               <span className="skill-name">{skill.name}</span>
             </div>
@@ -108,6 +114,8 @@ const Skills = () => {
 };
 
 export default Skills;
+
+
 
 
 
