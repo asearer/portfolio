@@ -1,6 +1,6 @@
 // Modal.js
 import React from 'react';
-import './Modal.css'; // Ensure you create styles for the modal
+import './Modal.css'; 
 
 const Modal = ({ skill, onClose }) => {
   if (!skill) return null;
