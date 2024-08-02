@@ -1,42 +1,77 @@
 /* Container for the skills list */
 .skills-list {
   display: flex;
-  flex-wrap: wrap; /* Allows the cards to wrap to the next line if there's not enough space */
-  justify-content: space-around; /* Distributes space evenly between items */
-  gap: 20px; /* Space between cards */
-  padding: 20px; /* Padding around the container */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
 }
 
 /* Neumorphism styling for the skill items */
 .skill-item {
-  background: #e0e0e0; /* Light background color */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 8px 8px 16px #b0b0b0, -8px -8px 16px #ffffff; /* Soft shadow for neumorphism effect */
+  background: #e0e0e0;
+  border-radius: 15px;
+  box-shadow: 8px 8px 16px #b0b0b0, -8px -8px 16px #ffffff;
   padding: 15px;
   display: flex;
   align-items: center;
-  width: 150px; /* Fixed width to ensure consistency */
-  height: 100px; /* Fixed height for uniformity */
-  transition: all 0.3s ease;
+  width: 150px;
+  height: 100px;
+  position: relative; /* To position the info pane */
+  overflow: hidden; /* Ensure the info pane is clipped to the item */
+  transition: box-shadow 0.3s ease;
 }
 
 .skill-item:hover {
-  box-shadow: 4px 4px 8px #b0b0b0, -4px -4px 8px #ffffff; /* Slightly more pronounced shadow on hover */
+  box-shadow: 4px 4px 8px #b0b0b0, -4px -4px 8px #ffffff;
 }
 
+/* Container for the skill icon */
+.skill-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+
+/* Skill icon styling */
 .skill-icon {
-  font-size: 24px; /* Adjust size as needed */
-  margin-right: 10px; /* Space between icon and text */
+  font-size: 24px;
+}
+
+/* Container for the skill information pane */
+.skill-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  color: #333;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(100%); /* Initially hide the info pane below the skill item */
+  transition: transform 0.3s ease; /* Smooth transition */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Show info pane on hover */
+.skill-item:hover .skill-info {
+  transform: translateY(0); /* Slide up to reveal */
 }
 
 .skill-name {
-  font-size: 16px; /* Adjust size as needed */
-  color: #333; /* Text color */
+  font-size: 16px;
+  font-weight: bold;
 }
 
-/* Optional: Add a smooth transition effect for hover */
-.skill-item {
-  transition: box-shadow 0.3s ease;
+.skill-description {
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 

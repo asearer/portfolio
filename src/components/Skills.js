@@ -6,8 +6,8 @@ import {
   faNodeJs,
   faHtml5,
   faCss3Alt,
-  faPython
-} from '@fortawesome/free-brands-svg-icons'; 
+  faPython,
+} from '@fortawesome/free-brands-svg-icons';
 import './Skills.css';
 
 const skills = [
@@ -25,8 +25,13 @@ const Skills = () => (
     <div className="skills-list">
       {skills.map((skill, index) => (
         <div className="skill-item" key={index}>
-          <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
-          <span className="skill-name">{skill.name}</span>
+          <div className="skill-icon-container">
+            <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
+          </div>
+          <div className="skill-info">
+            <span className="skill-name">{skill.name}</span>
+            <p className="skill-description">{skill.description}</p>
+          </div>
         </div>
       ))}
     </div>
