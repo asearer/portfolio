@@ -14,18 +14,22 @@ import './Skills.css';
 const skills = [
   {
     name: 'Certification 1',
+    image: 'path-to-certification1-image.jpg',
     description: 'Description of Certification 1, detailing what skills or knowledge were acquired.'
   },
   {
     name: 'Certification 2',
+    image: 'path-to-certification2-image.jpg',
     description: 'Description of Certification 2, outlining the expertise gained or validated through this certification.'
   },
   {
     name: 'Certification 3',
+    image: 'path-to-certification3-image.jpg',
     description: 'Description of Certification 3, including the scope and relevance of the certification in your field.'
   },
   {
     name: 'Certification 4',
+    image: 'path-to-certification4-image.jpg',
     description: 'Description of Certification 4, specifying the skills and knowledge covered by this certification.'
   },
   {
