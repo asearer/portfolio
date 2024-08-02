@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './HeroSection.css'; // Ensure this CSS file includes styles for the HeroSection
+import './HeroSection.css'; 
 
 // Import FontAwesome icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,7 +26,7 @@ const HeroSection = () => {
         <div className="contact-info">
           <p><FontAwesomeIcon icon={faEnvelope} /> Email: <a href="mailto:asearerdev@gmail.com">asearerdev@gmail.com</a></p>
           <p><FontAwesomeIcon icon={faPhone} /> Phone: (123) 456-7890</p>
-          <p><FontAwesomeIcon icon={faLinkedin} /> LinkedIn: <a href="https://www.linkedin.com/in/alonzasearer/" target="_blank" rel="noopener noreferrer">Your LinkedIn Profile</a></p>
+          <p><FontAwesomeIcon icon={faLinkedin} /> LinkedIn: <a href="https://www.linkedin.com/in/alonzasearer/" target="_blank" rel="noopener noreferrer">Alonza Searer</a></p>
         </div>
       )}
     </div>

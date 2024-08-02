@@ -1,6 +1,7 @@
 h2 {
   text-align: center;
 }
+
 /* Container for the skills list */
 .skills-list {
   display: flex;
@@ -137,4 +138,3 @@ h2 {
   font-size: 14px;
   margin-top: 5px;
 }
-
