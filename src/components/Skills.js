@@ -31,7 +31,7 @@ const skills = [
     type: 'certification'
   },
   {
-    name: 'Frontend Development Libraries',
+    name: 'Front End Development Libraries',
     image: '/frontendlib.png',
     description: 'Description of Certification 2, outlining the expertise gained or validated through this certification.',
     type: 'certification'
