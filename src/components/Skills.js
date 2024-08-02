@@ -6,12 +6,28 @@ import {
   faNodeJs,
   faHtml5,
   faCss3Alt,
-  faPython,
-} from '@fortawesome/free-brands-svg-icons';
-import Modal from './Modal'; // Import the Modal component
+  faPython
+} from '@fortawesome/free-brands-svg-icons'; 
+import Modal from './Modal'; // Import the modal component
 import './Skills.css';
 
 const skills = [
+  {
+    name: 'Certification 1',
+    description: 'Description of Certification 1, detailing what skills or knowledge were acquired.'
+  },
+  {
+    name: 'Certification 2',
+    description: 'Description of Certification 2, outlining the expertise gained or validated through this certification.'
+  },
+  {
+    name: 'Certification 3',
+    description: 'Description of Certification 3, including the scope and relevance of the certification in your field.'
+  },
+  {
+    name: 'Certification 4',
+    description: 'Description of Certification 4, specifying the skills and knowledge covered by this certification.'
+  },
   {
     name: 'JavaScript',
     icon: faJsSquare,
@@ -44,15 +60,14 @@ const skills = [
   },
 ];
 
-
 const Skills = () => {
   const [selectedSkill, setSelectedSkill] = useState(null);
 
-  const handleSkillClick = (skill) => {
+  const openModal = (skill) => {
     setSelectedSkill(skill);
   };
 
-  const handleCloseModal = () => {
+  const closeModal = () => {
     setSelectedSkill(null);
   };
 
@@ -61,9 +76,17 @@ const Skills = () => {
       <h2>Skills</h2>
       <div className="skills-list">
         {skills.map((skill, index) => (
-          <div className="skill-item" key={index} onClick={() => handleSkillClick(skill)}>
+          <div 
+            className="skill-item" 
+            key={index}
+            onClick={() => openModal(skill)}
+          >
             <div className="skill-icon-container">
-              <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
+              {skill.icon ? (
+                <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
+              ) : (
+                <div className="skill-icon-placeholder"></div>
+              )}
             </div>
             <div className="skill-info">
               <span className="skill-name">{skill.name}</span>
@@ -72,12 +95,21 @@ const Skills = () => {
         ))}
       </div>
 
-      <Modal skill={selectedSkill} onClose={handleCloseModal} />
+      <Modal
+        skill={selectedSkill}
+        onClose={closeModal}
+      />
     </section>
   );
 };
 
 export default Skills;
+
+
+
+
+
+
 
 
 
