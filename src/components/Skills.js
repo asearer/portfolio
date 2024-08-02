@@ -95,10 +95,11 @@ const Skills = () => {
               </div>
             ) : (
               <div className="skill-icon-container">
-                <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
+                
               </div>
             )}
             <div className="skill-info">
+            <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
               <span className="skill-name">{skill.name}</span>
             </div>
           </div>
