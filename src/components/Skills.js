@@ -15,25 +15,25 @@ const skills = [
    {
     name: 'Responsive Web Design',
     image: '/responsive-web-design.png',
-    description: 'Description of Certification 3, including the scope and relevance of the certification in your field.',
+    description: 'Mastered the principles of Responsive Web Design, ensuring seamless user experiences across various devices and screen sizes. Proficient in crafting flexible layouts, adaptive images, and media queries, I bring a keen eye for detail and a commitment to accessibility standards.',
     type: 'certification'
   },
   {
     name: 'Software Engineering',
     image: '/umass.png',
-    description: 'Description of Certification 4, specifying the skills and knowledge covered by this certification.',
+    description: 'Gained comprehensive knowledge in Software Engineering, covering the full software development lifecycle. Equipped with advanced problem-solving skills, I am adept at designing, implementing, and maintaining robust software solutions, utilizing industry-standard methodologies and best practices.',
     type: 'certification'
   },
   {
     name: 'Data Visualization',
     image: '/datavis.png',
-    description: 'Description of Certification 1, detailing what skills or knowledge were acquired.',
+    description: 'Specialized in Data Visualization, translating complex data into intuitive and actionable insights. Proficient with modern tools and techniques for creating compelling visualizations that drive decision-making and storytelling, enhancing data comprehension and engagement.',
     type: 'certification'
   },
   {
     name: 'Front End Development Libraries',
     image: '/frontendlib.png',
-    description: 'Description of Certification 2, outlining the expertise gained or validated through this certification.',
+    description: 'Gained deep knowledge of Front End Development Libraries, including React, Angular, and Vue. Skilled in leveraging these libraries to build dynamic, scalable, and maintainable user interfaces, I excel in enhancing web performance and user interaction through modern development practices.',
     type: 'certification'
   },
  
