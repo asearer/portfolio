@@ -1,24 +1,31 @@
-/* Add these styles to ensure tooltips are visible and styled properly */
-
-.react-tooltip {
-  position: absolute;
-  z-index: 9999; /* Ensure it appears above other content */
-  background-color: #333; /* Dark background for better contrast */
-  color: #fff; /* White text */
-  padding: 5px;
-  border-radius: 4px;
-  font-size: 12px;
-  white-space: nowrap; /* Prevent text from wrapping */
+/* Neumorphism styling for the skill items */
+.skill-item {
+  background: #e0e0e0; /* Light background color */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 8px 8px 16px #b0b0b0, -8px -8px 16px #ffffff; /* Soft shadow for neumorphism effect */
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  transition: all 0.3s ease;
 }
 
-/* Optional: Add an arrow pointing to the tooltip trigger */
-.react-tooltip:after {
-  content: '';
-  position: absolute;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #333 transparent transparent transparent;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+.skill-item:hover {
+  box-shadow: 4px 4px 8px #b0b0b0, -4px -4px 8px #ffffff; /* Slightly more pronounced shadow on hover */
 }
+
+.skill-icon {
+  font-size: 24px; /* Adjust size as needed */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.skill-name {
+  font-size: 16px; /* Adjust size as needed */
+  color: #333; /* Text color */
+}
+
+/* Optional: Add a smooth transition effect for hover */
+.skill-item {
+  transition: box-shadow 0.3s ease;
+}
+
