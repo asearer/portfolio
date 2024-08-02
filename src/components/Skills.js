@@ -13,25 +13,25 @@ import './Skills.css';
 
 const skills = [
   {
-    name: 'Certification 1',
+    name: 'Data Visualization',
     image: '/datavis.png',
     description: 'Description of Certification 1, detailing what skills or knowledge were acquired.',
     type: 'certification'
   },
   {
-    name: 'Certification 2',
+    name: 'Frontend Development Libraries',
     image: '/frontendlib.png',
     description: 'Description of Certification 2, outlining the expertise gained or validated through this certification.',
     type: 'certification'
   },
   {
-    name: 'Certification 3',
+    name: 'Responsive Web Design',
     image: '/responsive-web-design.png',
     description: 'Description of Certification 3, including the scope and relevance of the certification in your field.',
     type: 'certification'
   },
   {
-    name: 'Certification 4',
+    name: 'Software Engineering',
     image: '/umass.png',
     description: 'Description of Certification 4, specifying the skills and knowledge covered by this certification.',
     type: 'certification'
