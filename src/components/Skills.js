@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faJsSquare,
@@ -8,6 +8,7 @@ import {
   faCss3Alt,
   faPython,
 } from '@fortawesome/free-brands-svg-icons';
+import Modal from './Modal'; // Import the Modal component
 import './Skills.css';
 
 const skills = [
@@ -19,26 +20,40 @@ const skills = [
   { name: 'Python', icon: faPython, description: 'Experienced in the Python programming language for data analysis, machine learning, and web development.' },
 ];
 
-const Skills = () => (
-  <section id="skills">
-    <h2>Skills</h2>
-    <div className="skills-list">
-      {skills.map((skill, index) => (
-        <div className="skill-item" key={index}>
-          <div className="skill-icon-container">
-            <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
+const Skills = () => {
+  const [selectedSkill, setSelectedSkill] = useState(null);
+
+  const handleSkillClick = (skill) => {
+    setSelectedSkill(skill);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedSkill(null);
+  };
+
+  return (
+    <section id="skills">
+      <h2>Skills</h2>
+      <div className="skills-list">
+        {skills.map((skill, index) => (
+          <div className="skill-item" key={index} onClick={() => handleSkillClick(skill)}>
+            <div className="skill-icon-container">
+              <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
+            </div>
+            <div className="skill-info">
+              <span className="skill-name">{skill.name}</span>
+            </div>
           </div>
-          <div className="skill-info">
-            <span className="skill-name">{skill.name}</span>
-            <p className="skill-description">{skill.description}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </section>
-);
+        ))}
+      </div>
+
+      <Modal skill={selectedSkill} onClose={handleCloseModal} />
+    </section>
+  );
+};
 
 export default Skills;
+
 
 
 
