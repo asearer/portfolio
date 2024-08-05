@@ -1,5 +1,5 @@
 import React from 'react';
-import './Projects.css'; // Ensure your styles are imported
+import './Projects.css'; 
 
 const ProjectCard = ({ title, description, techStack, liveDemo, sourceCode }) => (
   <div className="project-card">
@@ -44,12 +44,13 @@ const Projects = () => (
         sourceCode="https://github.com/example/repo"
       />
       <ProjectCard
-        title="Project 5"
-        description="Description of Project 5"
-        techStack="Ruby on Rails"
-        liveDemo="https://example.com"
-        sourceCode="https://github.com/example/repo"
-      />
+  title="Project 5"
+  description="Description of Project 5"
+  techStack="Python, Flask" 
+  liveDemo="https://example.com"
+  sourceCode="https://github.com/example/repo"
+/>
+"
       <ProjectCard
         title="Project 6"
         description="Description of Project 6"
@@ -60,14 +61,14 @@ const Projects = () => (
       <ProjectCard
         title="Project 7"
         description="Description of Project 7"
-        techStack="Swift, iOS"
+        techStack="Python, SQLAlchemy, PostgreSQL"
         liveDemo="https://example.com"
         sourceCode="https://github.com/example/repo"
       />
       <ProjectCard
         title="Project 8"
         description="Description of Project 8"
-        techStack="Java, Spring Boot"
+        techStack="React, MongoDB"
         liveDemo="https://example.com"
         sourceCode="https://github.com/example/repo"
       />
