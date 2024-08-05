@@ -50,7 +50,7 @@ const Projects = () => (
   liveDemo="https://example.com"
   sourceCode="https://github.com/example/repo"
 />
-"
+
       <ProjectCard
         title="Project 6"
         description="Description of Project 6"
