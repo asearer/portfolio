@@ -5,39 +5,65 @@
   margin: auto;
 }
 
+/* Header Styling */
 .about-section h2 {
   font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
 }
 
+/* Paragraph Styling */
 .about-section p {
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
 }
 
-.certification-item {
-  margin-bottom: 20px;
+/* Grid Layout for Certification Items */
+.certifications-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px; /* Space between items */
+  margin-bottom: 40px; /* Space below certifications */
 }
 
+/* Individual Certification Item Styling */
+.certification-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  max-height: 200px; /* Fixed height for scrollable area */
+  overflow: auto; /* Scrollable content */
+}
+
+/* Certification Item Title */
 .certification-item h4 {
   font-size: 1.2rem;
   color: #333;
+  margin-bottom: 10px;
 }
 
+/* Certification Item List */
 .certification-item ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Certification Item List Items */
 .certification-item li {
   font-size: 1rem;
   line-height: 1.5;
   color: #666;
 }
 
+/* Experience Highlights Styling */
 .experience-highlights {
   margin-top: 20px;
 }
@@ -54,6 +80,7 @@
   color: #666;
 }
 
+/* Modal Button Styling */
 .modal-button {
   background-color: #007bff; /* Modern blue color */
   border: none;
@@ -74,10 +101,12 @@
   background-color: #0056b3; /* Darker blue on hover */
 }
 
+/* Modal Button Icon Styling */
 .modal-button .fa-download {
   margin-right: 10px; /* Space between icon and text */
 }
 
+/* Close Button Styling */
 .close {
   color: #555; /* Darker close button color */
   float: right;
@@ -93,6 +122,7 @@
   cursor: pointer;
 }
 
+/* Modal Styling */
 .modal {
   display: none;
   position: fixed;
@@ -125,6 +155,11 @@
     opacity: 1;
   }
 }
+
+
+
+
+
 
 
 

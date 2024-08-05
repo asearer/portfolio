@@ -34,36 +34,38 @@ const About = () => {
 
       <h3>Certifications</h3>
 
-      <div className="certification-item">
-        <h4>Responsive Web Design</h4>
-        <ul>
-          <li><strong>Institution:</strong> FreeCodeCamp</li>
-          <li><strong>Overview:</strong> Mastered responsive design techniques and best practices, including media queries, Flexbox, and Grid Layout. Proficient in creating flexible, mobile-first websites that adapt seamlessly to various screen sizes.</li>
-        </ul>
-      </div>
+      <div className="certifications-container">
+        <div className="certification-item">
+          <h4>Responsive Web Design</h4>
+          <ul>
+            <li><strong>Institution:</strong> FreeCodeCamp</li>
+            <li><strong>Overview:</strong> Mastered responsive design techniques and best practices, including media queries, Flexbox, and Grid Layout. Proficient in creating flexible, mobile-first websites that adapt seamlessly to various screen sizes.</li>
+          </ul>
+        </div>
 
-      <div className="certification-item">
-        <h4>Software Engineering</h4>
-        <ul>
-          <li><strong>Institution:</strong> UMass Global</li>
-          <li><strong>Overview:</strong> Acquired comprehensive software engineering skills, including project management, software development methodologies, and advanced programming techniques. Gained hands-on experience in designing, developing, and deploying scalable software solutions.</li>
-        </ul>
-      </div>
+        <div className="certification-item">
+          <h4>Software Engineering</h4>
+          <ul>
+            <li><strong>Institution:</strong> UMass Global</li>
+            <li><strong>Overview:</strong> Acquired comprehensive software engineering skills, including project management, software development methodologies, and advanced programming techniques. Gained hands-on experience in designing, developing, and deploying scalable software solutions.</li>
+          </ul>
+        </div>
 
-      <div className="certification-item">
-        <h4>Data Visualization</h4>
-        <ul>
-          <li><strong>Institution:</strong> FreeCodeCamp</li>
-          <li><strong>Overview:</strong> Specialized in transforming complex data into clear, insightful visualizations using tools like Tableau and Python libraries. Developed the ability to communicate data-driven insights effectively through charts, graphs, and interactive dashboards.</li>
-        </ul>
-      </div>
+        <div className="certification-item">
+          <h4>Data Visualization</h4>
+          <ul>
+            <li><strong>Institution:</strong> FreeCodeCamp</li>
+            <li><strong>Overview:</strong> Specialized in transforming complex data into clear, insightful visualizations using tools like Tableau and Python libraries. Developed the ability to communicate data-driven insights effectively through charts, graphs, and interactive dashboards.</li>
+          </ul>
+        </div>
 
-      <div className="certification-item">
-        <h4>Front-End Development Libraries</h4>
-        <ul>
-          <li><strong>Institution:</strong> FreeCodeCamp</li>
-          <li><strong>Overview:</strong> Explored modern front-end libraries and frameworks, including React, Angular, and Vue.js. Enhanced skills in building dynamic, interactive web applications with efficient state management and reusable components.</li>
-        </ul>
+        <div className="certification-item">
+          <h4>Front-End Development Libraries</h4>
+          <ul>
+            <li><strong>Institution:</strong> FreeCodeCamp</li>
+            <li><strong>Overview:</strong> Explored modern front-end libraries and frameworks, including React, Angular, and Vue.js. Enhanced skills in building dynamic, interactive web applications with efficient state management and reusable components.</li>
+          </ul>
+        </div>
       </div>
 
       <h3>Experience Highlights</h3>
@@ -101,6 +103,7 @@ const About = () => {
 };
 
 export default About;
+
 
 
 
