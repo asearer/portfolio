@@ -33,50 +33,29 @@ const About = () => {
       </p>
 
       <h3>Certifications</h3>
+      <p><strong>Responsive Web Design:</strong></p>
+      <p><strong>Institution:</strong> FreeCodeCamp</p>
+      <p><strong>Overview:</strong> Mastered responsive design techniques and best practices, including media queries, Flexbox, and Grid Layout. Proficient in creating flexible, mobile-first websites that adapt seamlessly to various screen sizes.</p>
 
-      <div className="certifications-container">
-        <div className="certification-item">
-          <h4>Responsive Web Design</h4>
-          <ul>
-            <li><strong>Institution:</strong> FreeCodeCamp</li>
-            <li><strong>Overview:</strong> Mastered responsive design techniques and best practices, including media queries, Flexbox, and Grid Layout. Proficient in creating flexible, mobile-first websites that adapt seamlessly to various screen sizes.</li>
-          </ul>
-        </div>
+      <p><strong>Software Engineering:</strong></p>
+      <p><strong>Institution:</strong> UMass Global</p>
+      <p><strong>Overview:</strong> Acquired comprehensive software engineering skills, including project management, software development methodologies, and advanced programming techniques. Gained hands-on experience in designing, developing, and deploying scalable software solutions.</p>
 
-        <div className="certification-item">
-          <h4>Software Engineering</h4>
-          <ul>
-            <li><strong>Institution:</strong> UMass Global</li>
-            <li><strong>Overview:</strong> Acquired comprehensive software engineering skills, including project management, software development methodologies, and advanced programming techniques. Gained hands-on experience in designing, developing, and deploying scalable software solutions.</li>
-          </ul>
-        </div>
+      <p><strong>Data Visualization:</strong></p>
+      <p><strong>Institution:</strong> FreeCodeCamp</p>
+      <p><strong>Overview:</strong> Specialized in transforming complex data into clear, insightful visualizations using tools like D3.js and Python libraries. Developed the ability to communicate data-driven insights effectively through charts, graphs, and interactive dashboards.</p>
 
-        <div className="certification-item">
-          <h4>Data Visualization</h4>
-          <ul>
-            <li><strong>Institution:</strong> FreeCodeCamp</li>
-            <li><strong>Overview:</strong> Specialized in transforming complex data into clear, insightful visualizations using tools like Tableau and Python libraries. Developed the ability to communicate data-driven insights effectively through charts, graphs, and interactive dashboards.</li>
-          </ul>
-        </div>
-
-        <div className="certification-item">
-          <h4>Front-End Development Libraries</h4>
-          <ul>
-            <li><strong>Institution:</strong> FreeCodeCamp</li>
-            <li><strong>Overview:</strong> Explored modern front-end libraries and frameworks, including React, Angular, and Vue.js. Enhanced skills in building dynamic, interactive web applications with efficient state management and reusable components.</li>
-          </ul>
-        </div>
-      </div>
+      <p><strong>Front-End Development Libraries:</strong></p>
+      <p><strong>Institution:</strong> FreeCodeCamp</p>
+      <p><strong>Overview:</strong> Explored modern front-end libraries and frameworks, including React, Angular, and Vue.js. Enhanced skills in building dynamic, interactive web applications with efficient state management and reusable components.</p>
 
       <h3>Experience Highlights</h3>
-      <div className="experience-highlights">
-        <ul>
-          <li><strong>Responsive Web Design:</strong> Designed and implemented responsive web interfaces, ensuring optimal user experiences across devices.</li>
-          <li><strong>Software Engineering:</strong> Developed robust software solutions with a focus on scalability, maintainability, and performance.</li>
-          <li><strong>Data Visualization:</strong> Created compelling visual stories from data, facilitating informed decision-making.</li>
-          <li><strong>Front-End Development Libraries:</strong> Leveraged advanced front-end technologies to build high-performance web applications.</li>
-        </ul>
-      </div>
+      <ul>
+        <li><strong>Responsive Web Design:</strong> Designed and implemented responsive web interfaces, ensuring optimal user experiences across devices.</li>
+        <li><strong>Software Engineering:</strong> Developed robust software solutions with a focus on scalability, maintainability, and performance.</li>
+        <li><strong>Data Visualization:</strong> Created compelling visual stories from data, facilitating informed decision-making.</li>
+        <li><strong>Front-End Development Libraries:</strong> Leveraged advanced front-end technologies to build high-performance web applications.</li>
+      </ul>
 
       <button className="modal-button" onClick={handleDownloadClick}>
         <FontAwesomeIcon icon={faDownload} /> Download Resume
@@ -103,6 +82,7 @@ const About = () => {
 };
 
 export default About;
+
 
 
 
