@@ -40,7 +40,7 @@ const About = () => {
 
       <p><strong>Software Engineering</strong></p>
       <p><strong>Date Aquired:</strong> February 2024</p>
-      <p><strong>Institution:</strong> UMass Global Campus</p>
+      <p><strong>Institution:</strong> UMass Global Software Engineering Bootcamp</p>
       <p><strong>Overview:</strong> Acquired comprehensive software engineering skills, including project management, software development methodologies, and advanced programming techniques. Gained hands-on experience in designing, developing, and deploying scalable software solutions.</p><br></br>
 
       <p><strong>Data Visualization</strong></p>
