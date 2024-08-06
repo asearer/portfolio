@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import AdminPage from './components/AdminPage'; // Import the AdminPage component
 import './App.css';
 
 // Import FontAwesome CSS
@@ -24,6 +25,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/admin" element={<AdminPage />} /> {/* Add route for AdminPage */}
       </Routes>
       <Footer />
     </div>
@@ -31,6 +33,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

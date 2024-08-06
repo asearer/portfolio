@@ -12,7 +12,7 @@ const Header = () => (
         <li><Link className="neumorphic-button" to="/skills">Skills</Link></li>
         <li><Link className="neumorphic-button" to="/projects">Projects</Link></li>
         <li><Link className="neumorphic-button" to="/blog">Blog</Link></li>
-        {/* <li><Link className="neumorphic-button" to="/contact">Contact</Link></li> */}
+        <li><Link className="neumorphic-button" to="/admin">Admin</Link></li>
       </ul>
     </nav>
   </header>
