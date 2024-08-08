@@ -19,6 +19,36 @@ const About = () => {
   return (
     <section className="about-section">
       <h2>About Me</h2>
+      <button className="modal-button" onClick={handleDownloadClick}>
+        <FontAwesomeIcon icon={faDownload} /> Download Resume
+      </button>
+
+      {/* Modal for download options */}
+      <div id="downloadModal" className="modal">
+        <div className="modal-content">
+          <span className="close" onClick={handleCloseModal}>
+            <FontAwesomeIcon icon={faTimes} />
+          </span>
+          <h2>Download Resume</h2>
+          <p>Select a format to download:</p>
+          <a
+            href="/Alonza_Searer_Resume.pdf"
+            download="Alonza_Searer_Resume.pdf"
+            className="modal-button"
+            onClick={handleCloseModal}
+          >
+            <FontAwesomeIcon icon={faDownload} /> Download PDF
+          </a>
+          <a
+            href="/Alonza_Searer_Resume.docx"
+            download="Alonza_Searer_Resume.docx"
+            className="modal-button"
+            onClick={handleCloseModal}
+          >
+            <FontAwesomeIcon icon={faDownload} /> Download DOCX
+          </a>
+        </div>
+      </div>
       <p>
         I am a passionate software developer with a diverse background in web development and data analysis. My journey in technology has been both dynamic and rewarding, marked by a continuous quest for learning and professional growth. Currently, I am pursuing a Bachelor’s degree in Computer Science with a concentration in Software Engineering at Southern New Hampshire University (SNHU). This academic endeavor is allowing me to deepen my understanding of software development principles and gain hands-on experience with advanced technologies.
       </p>
@@ -52,36 +82,7 @@ const About = () => {
         <li><strong>Front-End Development Libraries:</strong> Leveraged advanced front-end technologies to build high-performance web applications.</li>
       </ul>
 
-      <button className="modal-button" onClick={handleDownloadClick}>
-        <FontAwesomeIcon icon={faDownload} /> Download Resume
-      </button>
-
-      {/* Modal for download options */}
-      <div id="downloadModal" className="modal">
-        <div className="modal-content">
-          <span className="close" onClick={handleCloseModal}>
-            <FontAwesomeIcon icon={faTimes} />
-          </span>
-          <h2>Download Resume</h2>
-          <p>Select a format to download:</p>
-          <a
-            href="/Alonza_Searer_Resume.pdf"
-            download="Alonza_Searer_Resume.pdf"
-            className="modal-button"
-            onClick={handleCloseModal}
-          >
-            <FontAwesomeIcon icon={faDownload} /> Download PDF
-          </a>
-          <a
-            href="/Alonza_Searer_Resume.docx"
-            download="Alonza_Searer_Resume.docx"
-            className="modal-button"
-            onClick={handleCloseModal}
-          >
-            <FontAwesomeIcon icon={faDownload} /> Download DOCX
-          </a>
-        </div>
-      </div>
+      
     </section>
   );
 };
