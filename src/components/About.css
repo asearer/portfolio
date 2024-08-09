@@ -4,6 +4,9 @@
   max-width: 800px;
   margin: auto;
   text-align: center; /* Center text and inline elements */
+  background: #e0e0e0; /* Light background for contrast */
+  border-radius: 20px; /* Rounded corners for neumorphism */
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.8); /* Neumorphic shadow effect */
 }
 
 /* Header Styling */
@@ -15,7 +18,7 @@
 
 /* Modal Button Styling */
 .modal-button {
-  background-color: #007bff; /* Modern blue color */
+  background-color: #007bff; /* Keep the modern blue color */
   border: none;
   color: #fff;
   padding: 12px 24px; /* Increased padding */
@@ -24,14 +27,16 @@
   display: inline-flex; /* Inline-flex for text and icon alignment */
   align-items: center;
   font-size: 16px;
-  border-radius: 6px; /* Rounded corners */
+  border-radius: 12px; /* Rounded corners */
   margin: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth color transition */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth color and shadow transitions */
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.9); /* Neumorphic shadow effect */
 }
 
 .modal-button:hover {
   background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.8); /* Darker shadow on hover */
 }
 
 /* Modal Button Icon Styling */
@@ -49,23 +54,23 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+  background-color: rgba(0, 0, 0, 0.4); /* Slightly darker overlay */
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: #f0f0f0; /* Light gray background for neumorphism */
   margin: 10% auto; /* Center vertically and horizontally */
   padding: 20px;
-  border: 1px solid #ddd; /* Light border for modern look */
+  border: none; /* No border for neumorphism */
   width: 90%; /* Responsive width */
   max-width: 500px; /* Maximum width for larger screens */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.8); /* Neumorphic shadow effect */
   animation: fadeIn 0.3s ease-in; /* Smooth fade-in */
 }
 
 .close {
-  color: #555; /* Darker close button color */
+  color: #333; /* Darker close button color */
   float: right;
   font-size: 24px; /* Slightly smaller font size */
   font-weight: bold;
@@ -87,3 +92,35 @@
     opacity: 1;
   }
 }
+
+/* Certification Cards Styling */
+.certification-card {
+  background-color: #f0f0f0; /* Light gray background for neumorphism */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.8); /* Neumorphic shadow effect */
+  padding: 20px;
+  margin: 15px 0; /* Space between cards */
+  text-align: left; /* Left-align text inside the card */
+}
+
+/* Experience Cards Styling */
+.experience-card {
+  background-color: #f0f0f0; /* Light gray background for neumorphism */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.8); /* Neumorphic shadow effect */
+  padding: 20px;
+  margin: 15px 0; /* Space between cards */
+  text-align: left; /* Left-align text inside the card */
+}
+
+.experience-card h4 {
+  margin-top: 0; /* Remove top margin for the card header */
+}
+
+.experience-card p {
+  margin: 5px 0; /* Margin between paragraphs */
+}
+
+
+
+
