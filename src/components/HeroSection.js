@@ -4,7 +4,7 @@ import './HeroSection.css';
 // Import FontAwesome icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 
 const HeroSection = () => {
@@ -24,10 +24,12 @@ const HeroSection = () => {
 
       {showContact && (
         <div className="contact-info">
-          <p><FontAwesomeIcon icon={faEnvelope} /> Email: <a href="mailto:asearerdev@gmail.com">asearerdev@gmail.com</a></p>
-          <p><FontAwesomeIcon icon={faPhone} /> Phone: (123) 456-7890</p>
-          <p><FontAwesomeIcon icon={faLinkedin} /> LinkedIn: <a href="https://www.linkedin.com/in/alonzasearer/" target="_blank" rel="noopener noreferrer">Alonza Searer</a></p>
-        </div>
+        <p><FontAwesomeIcon icon={faEnvelope} /> Email: <a href="mailto:asearerdev@gmail.com">asearerdev@gmail.com</a></p>
+        <p><FontAwesomeIcon icon={faFacebook} /> Facebook: <a href="https://www.facebook.com/ASearerDev" target="_blank" rel="noopener noreferrer">https://www.facebook.com/ASearerDev</a></p>
+        <p><FontAwesomeIcon icon={faPhone} /> Phone: (123) 456-7890</p>
+        <p><FontAwesomeIcon icon={faLinkedin} /> LinkedIn: <a href="https://www.linkedin.com/in/alonzasearer/" target="_blank" rel="noopener noreferrer">Alonza Searer</a></p>
+      </div>
+      
       )}
     </div>
   );
