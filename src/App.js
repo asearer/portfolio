@@ -1,14 +1,13 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
+import Layout from './components/Layout'; // Import the Layout component
 import HeroSection from './components/HeroSection';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
-import AdminPage from './components/AdminPage'; // Import the AdminPage component
+import AdminPage from './components/AdminPage'; 
 import './App.css';
 
 // Import FontAwesome CSS
@@ -16,8 +15,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <Layout>
       <Routes>
         <Route path="/" element={<HeroSection />} />
         <Route path="/about" element={<About />} />
@@ -25,14 +23,14 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/admin" element={<AdminPage />} /> {/* Add route for AdminPage */}
+        <Route path="/admin" element={<AdminPage />} />
       </Routes>
-      <Footer />
-    </div>
+    </Layout>
   );
 }
 
 export default App;
+
 
 
 
