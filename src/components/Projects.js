@@ -14,7 +14,8 @@ const ProjectCard = ({ title, description, techStack, liveDemo, sourceCode }) =>
 const Projects = () => (
   <section id="projects">
     <h2>Projects</h2>
-    <div className="projects-grid">
+    <h2>More coming soon...Feel free to browse my GitHub or CodePen!</h2>
+    {/* <div className="projects-grid">
       <ProjectCard
         title="Project 1"
         description="Description of Project 1"
@@ -72,7 +73,7 @@ const Projects = () => (
         liveDemo="https://example.com"
         sourceCode="https://github.com/example/repo"
       />
-    </div>
+    </div> */}
   </section>
 );
 
