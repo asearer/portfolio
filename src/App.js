@@ -8,9 +8,9 @@ import Projects from './components/Projects';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 import AdminPage from './components/AdminPage'; 
-import './App.css';
+import './App.css'; // Import global styles
 
-// Import FontAwesome CSS
+// Import FontAwesome CSS for icons
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
@@ -30,9 +30,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
