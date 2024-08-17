@@ -24,10 +24,10 @@ const HeroSection = () => {
 
       {showContact && (
         <div className="contact-info">
-          <p><FontAwesomeIcon icon={faLinkedin} /> LinkedIn: <a href="https://www.linkedin.com/in/alonzasearer/" target="_blank" rel="noopener noreferrer">Alonza Searer</a></p>
-          <p><FontAwesomeIcon icon={faXTwitter} /> : <a href="https://x.com/AlonzaSearer" target="_blank" rel="noopener noreferrer">Alonza Searer</a></p>
-        <p><FontAwesomeIcon icon={faEnvelope} /> Email: <a href="mailto:asearerdev@gmail.com">asearerdev@gmail.com</a></p>
-        <p><FontAwesomeIcon icon={faFacebook} /> Facebook: <a href="https://www.facebook.com/ASearerDev" target="_blank" rel="noopener noreferrer">ASearerDev</a></p>
+          <p><FontAwesomeIcon icon={faLinkedin} /> : <a href="https://www.linkedin.com/in/alonzasearer/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+          <p><FontAwesomeIcon icon={faXTwitter} /> : <a href="https://x.com/AlonzaSearer" target="_blank" rel="noopener noreferrer">X</a></p>
+        <p><FontAwesomeIcon icon={faEnvelope} /> : <a href="mailto:asearerdev@gmail.com">Email</a></p>
+        <p><FontAwesomeIcon icon={faFacebook} /> : <a href="https://www.facebook.com/ASearerDev" target="_blank" rel="noopener noreferrer">Facebook</a></p>
         {/* <p><FontAwesomeIcon icon={faPhone} /> Phone: (123) 456-7890</p> */}
         
       </div>

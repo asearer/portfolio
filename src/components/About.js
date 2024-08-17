@@ -52,7 +52,7 @@ const About = () => {
 
       <div className="about-me">
         <p>
-          I am a passionate software developer with a diverse background in web development and data analysis. My journey in technology has been both dynamic and rewarding, marked by a continuous quest for learning and professional growth. Currently, I am pursuing a Bachelor’s degree in Computer Science with a concentration in Software Engineering at Southern New Hampshire University (SNHU). This academic endeavor is allowing me to deepen my understanding of software development principles and gain hands-on experience with advanced technologies.
+          I'm Alonza Searer, and I am a passionate software developer with a diverse background in web development and data analysis. My journey in technology has been both dynamic and rewarding, marked by a continuous quest for learning and professional growth. Currently, I am pursuing a Bachelor’s degree in Computer Science with a concentration in Software Engineering at Southern New Hampshire University (SNHU). This academic endeavor is allowing me to deepen my understanding of software development principles and gain hands-on experience with advanced technologies.
         </p>
       </div>
 

@@ -25,7 +25,7 @@
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-flex; /* Changed from inline-block to inline-flex for better icon alignment */
+  display: inline-flex; /* Inline-flex for better alignment */
   align-items: center; /* Centers text and icon vertically */
   font-size: 16px;
   margin: 5px 2px;
@@ -38,17 +38,19 @@
   background-color: #0056b3; /* Slightly darker shade of blue */
 }
 
-
 .contact-info {
   margin-top: 20px;
   font-size: 1.1em;
   line-height: 1.6;
   text-align: center; /* Center-align the text */
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  gap: 8px; /* Adds space between each contact item */
 }
 
 .contact-info p {
   display: flex;
-  align-items: center; /* Centers icons and text vertically */
+  align-items: center; /* Aligns icons with text vertically */
   justify-content: center; /* Centers the content horizontally */
   margin: 10px 0;
 }
@@ -64,9 +66,13 @@
 
 .contact-info .fa-envelope,
 .contact-info .fa-phone,
-.contact-info .fa-linkedin {
+.contact-info .fa-linkedin,
+.contact-info .fa-twitter,
+.contact-info .fa-facebook {
   margin-right: 8px; /* Adds space between icon and text */
 }
+
+
 
 
 
