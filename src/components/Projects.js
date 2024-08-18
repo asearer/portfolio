@@ -14,23 +14,23 @@ const ProjectCard = ({ title, description, techStack, liveDemo, sourceCode }) =>
 const Projects = () => (
   <section id="projects">
     <h2>Projects</h2>
-    <h2 className="under-construction">More coming soon...Feel free to browse my GitHub or CodePen!</h2>
-    {/* <div className="projects-grid">
+    <h2 className="under-construction">More coming soon...Feel free to browse my GitHub or CodePen!</h2><br></br>
+    <div className="projects-grid">
       <ProjectCard
-        title="Project 1"
-        description="Description of Project 1"
-        techStack="JavaScript, React"
-        liveDemo="https://example.com"
-        sourceCode="https://github.com/example/repo"
+        title="User Dashboard"
+        description="A visually engaging frontend demo built with React, showcasing a modern user interface designed using neumorphic design principles. The dashboard features interactive components like user profiles, statistics displays, and task management, all styled for a soft, 3D-like experience. This project highlights my ability to create user-friendly, aesthetically pleasing applications and serves as a foundation for further development into a full-fledged dashboard solution."
+        techStack="JavaScript, React, Bootstrap, CSS"
+        liveDemo="https://user-dashboard-snowy.vercel.app/"
+        sourceCode="https://github.com/asearer/user-dashboard"
       />
       <ProjectCard
-        title="Project 2"
-        description="Description of Project 2"
+        title="Responsive Landing Page"
+        description="A sleek, modern landing page showcasing a neumorphic design. This front-end demo features a fully responsive layout with a clean, minimalist style, ideal for presenting products or services. Built with HTML, CSS, and JavaScript, it emphasizes visual appeal and user interaction."
         techStack="HTML, CSS, JavaScript"
-        liveDemo="https://example.com"
-        sourceCode="https://github.com/example/repo"
+        liveDemo="https://asearer.github.io/responsive-landing-page/"
+        sourceCode="https://github.com/asearer/responsive-landing-page"
       />
-      <ProjectCard
+      {/* <ProjectCard
         title="Project 3"
         description="Description of Project 3"
         techStack="Python, Django"
@@ -71,8 +71,8 @@ const Projects = () => (
         techStack="React, MongoDB"
         liveDemo="https://example.com"
         sourceCode="https://github.com/example/repo"
-      />
-    </div> */}
+      /> */}
+    </div> 
   </section>
 );
 
