@@ -30,14 +30,14 @@ const Projects = () => (
         liveDemo="https://asearer.github.io/responsive-landing-page/"
         sourceCode="https://github.com/asearer/responsive-landing-page"
       />
-      {/* <ProjectCard
-        title="Project 3"
-        description="Description of Project 3"
-        techStack="Python, Flask"
-        liveDemo="https://example.com"
-        sourceCode="https://github.com/example/repo"
-      />
       <ProjectCard
+        title="Social Media Analytics Dashboard"
+        description="A dynamic React-based web application for visualizing social media metrics. It features interactive bar charts, line charts for growth analytics, and a pie chart for performance metrics. The dashboard also includes a post scheduling interface. Designed with a modern UI using Material-UI and D3.js, this demo highlights data visualization and interactive design. Note: Authentication/login functionality is currently disabled for demo purposes."
+        techStack="React, D3.js, Material-UI"
+        liveDemo="https://social-media-dashboard-umber-five.vercel.app/"
+        sourceCode="https://github.com/asearer/social-media-dashboard"
+      />
+      {/* <ProjectCard
         title="Project 4"
         description="Description of Project 4"
         techStack="Node.js, Express"
