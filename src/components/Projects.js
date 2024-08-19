@@ -33,7 +33,7 @@ const Projects = () => (
       {/* <ProjectCard
         title="Project 3"
         description="Description of Project 3"
-        techStack="Python, Django"
+        techStack="Python, Flask"
         liveDemo="https://example.com"
         sourceCode="https://github.com/example/repo"
       />
@@ -47,7 +47,7 @@ const Projects = () => (
       <ProjectCard
         title="Project 5"
         description="Description of Project 5"
-        techStack="Python, Flask" 
+        techStack="Python, Django" 
         liveDemo="https://example.com"
         sourceCode="https://github.com/example/repo"
       />
