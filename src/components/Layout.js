@@ -1,34 +1,21 @@
 import React from 'react';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import Header from './Header';
+import Footer from './Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Layout.css'; // Ensure this path is correct
+import './Layout.css';
 
 const Layout = ({ children }) => (
-  <>
-    <Navbar bg="light" expand="lg" className="navbar-neumorphic">
-      <Navbar.Brand href="/">asearerdev</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          {/* <Nav.Link href="/">Home</Nav.Link> */}
-          <Nav.Link href="/about">About</Nav.Link>
-          <Nav.Link href="/skills">Skills</Nav.Link>
-          <Nav.Link href="/projects">Projects</Nav.Link>
-          <Nav.Link href="https://github.com/asearer" target="_blank" rel="noopener noreferrer">GitHub</Nav.Link>
-          <Nav.Link href="https://codepen.io/asearer" target="_blank" rel="noopener noreferrer">CodePen</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-    <Container className="my-4 neumorphic-card">
+  <div className="layout-wrapper">
+    <Header />
+    <main className="main-content">
+      {/* We can remove Container if we want full width heroes, or keep it for content pages. 
+            Since Home has hero, we might want to let children handle container if needed, 
+            or use a fluid container. For now, removing the wrapping Container here gives more control to pages.
+        */}
       {children}
-    </Container>
-    <footer className="footer-neumorphic text-center py-3">
-      <p>Footer content here</p>
-    </footer>
-  </>
+    </main>
+    <Footer />
+  </div>
 );
 
 export default Layout;
-
-
-

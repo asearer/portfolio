@@ -1,78 +1,161 @@
-/* General Styles for Projects Section */
-#projects {
-  padding: 20px;
+/* Projects.css */
+.projects-section {
+  padding: var(--spacing-xl) 0;
+  min-height: 80vh;
 }
 
-h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Style for the "Under Construction" h2 */
-.under-construction {
-  color: #ff4500; /* Orange color for visibility */
-  font-weight: bold;
+/* Link back to languages */
+.languages-link-wrapper {
   text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.languages-back-link {
+  color: var(--text-accent);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+}
+
+.languages-back-link:hover {
+  color: var(--primary-color);
+  transform: translateX(-4px);
+  /* Little nudge back */
+}
+
+.back-icon {
+  font-size: 0.8em;
+}
+
+.category-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.filter-btn {
   position: relative;
-  top: 50px;
-
-  padding: 20px;
-  margin-top: 40px; /* Add margin-top to push it down */
-  margin-bottom: 20px; /* Ensure there's space below */
+  padding: 0.5rem 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.under-construction::before {
-  content: '🚧'; /* Construction emoji */
-  font-size: 2em;
+.filter-btn:hover,
+.filter-btn.active {
+  color: var(--primary-color);
+}
+
+.filter-icon {
+  font-size: 1.1em;
+}
+
+.active-underline {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -85px; /* Position the icon above the text */
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  border-radius: 1px;
 }
 
-/* Grid layout for project cards */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
 }
 
-/* Neumorphic Style for Project Cards */
 .project-card {
-  background: #e0e5ec;
-  border-radius: 15px;
-  box-shadow: 8px 8px 15px #a3b1c6, -8px -8px 15px #ffffff;
-  padding: 20px;
-  text-align: center;
-  transition: all 0.3s ease;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color var(--transition-normal);
+}
+
+.project-card:hover {
+  border-color: var(--primary-color);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
 }
 
 .project-card h3 {
-  font-size: 1.5rem;
-  color: #333;
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+}
+
+.category-tag {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid var(--border-color);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--spacing-md);
+}
+
+.tech-badge {
+  font-size: 0.75rem;
+  color: var(--primary-color);
+  background: rgba(56, 189, 248, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 500;
 }
 
 .project-card p {
-  font-size: 1rem;
-  color: #666;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
 }
 
-.project-card a {
-  display: block;
-  margin: 10px 0;
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
+.project-links {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: auto;
 }
 
-.project-card a:hover {
-  text-decoration: underline;
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
 }
 
-/* Optional: Add some hover effects for better interactivity */
-.project-card:hover {
-  box-shadow: 4px 4px 8px #a3b1c6, -4px -4px 8px #ffffff;
+.no-results {
+  text-align: center;
+  color: var(--text-secondary);
+  width: 100%;
+  grid-column: 1 / -1;
+  font-size: 1.2rem;
+  margin-top: var(--spacing-xl);
 }
-
-

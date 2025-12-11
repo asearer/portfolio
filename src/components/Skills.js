@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faJsSquare,
@@ -6,147 +7,96 @@ import {
   faNodeJs,
   faHtml5,
   faCss3Alt,
-  faPython
-} from '@fortawesome/free-brands-svg-icons'; 
-import Modal from './Modal'; // Import the modal component
+  faPython,
+  faGitAlt
+} from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faCode } from '@fortawesome/free-solid-svg-icons';
 import './Skills.css';
 
-const skills = [
-   {
-    name: 'Responsive Web Design',
-    image: '/responsive-web-design.png',
-    description: 'Mastered the principles of Responsive Web Design, ensuring seamless user experiences across various devices and screen sizes. Proficient in crafting flexible layouts, adaptive images, and media queries, I bring a keen eye for detail and a commitment to accessibility standards.',
-    type: 'certification'
+const displaySkills = [
+  {
+    category: "Frontend Development",
+    items: [
+      { name: 'React', icon: faReact },
+      { name: 'JavaScript (ES6+)', icon: faJsSquare },
+      { name: 'HTML5', icon: faHtml5 },
+      { name: 'CSS3 / SASS', icon: faCss3Alt },
+      { name: 'Responsive Design', icon: faCode }
+    ]
   },
   {
-    name: 'Software Engineering',
-    image: '/umass.png',
-    description: 'Gained comprehensive knowledge in Software Engineering, covering the full software development lifecycle. Equipped with advanced problem-solving skills, I am adept at designing, implementing, and maintaining robust software solutions, utilizing industry-standard methodologies and best practices.',
-    type: 'certification'
-  },
-  {
-    name: 'Data Visualization',
-    image: '/datavis.png',
-    description: 'Specialized in Data Visualization, translating complex data into intuitive and actionable insights. Proficient with modern tools and techniques for creating compelling visualizations that drive decision-making and storytelling, enhancing data comprehension and engagement.',
-    type: 'certification'
-  },
-  {
-    name: 'Front End Development Libraries',
-    image: '/frontendlib.png',
-    description: 'Gained deep knowledge of Front End Development Libraries, including React, Angular, and Vue. Skilled in leveraging these libraries to build dynamic, scalable, and maintainable user interfaces, I excel in enhancing web performance and user interaction through modern development practices.',
-    type: 'certification'
-  },
- 
-  
-  {
-    name: 'JavaScript',
-    image: '/javascript-js-icon.png',
-    icon: faJsSquare,
-    description: 'Experienced in JavaScript, including ES6+ features and various libraries and frameworks. Proficient with asynchronous programming using Promises and async/await. Hands-on experience with tools such as Webpack and Babel for build processes.'
-  },
-  {
-    name: 'React',
-    image: '/logo192.png',
-    icon: faReact,
-    description: 'Experienced in React for building user interfaces. Proficient with React Hooks, Context API, and Redux for state management. Skilled in component-based architecture and optimizing performance with techniques like memoization and lazy loading.'
-  },
-  {
-    name: 'Node.js',
-    image: '/nodejs.png',
-    icon: faNodeJs,
-    description: 'Experienced in Node.js for server-side development. Proficient with Express.js for building RESTful APIs, and familiar with tools like Nodemon and PM2 for development and process management. Knowledgeable in handling asynchronous operations and integrating with databases such as MongoDB and SQL.'
-  },
-  {
-    name: 'HTML',
-    image: '/html-5-logo-png-transparent.png',
-    icon: faHtml5,
-    description: 'Experienced in HTML5, including modern semantic elements and accessibility practices. Skilled in creating responsive layouts with flexible grids and media queries. Familiar with integrating multimedia elements and optimizing for SEO.'
-  },
-  {
-    name: 'CSS',
-    image: '/css3-logo.png',
-    icon: faCss3Alt,
-    description: 'Experienced in CSS3 with a focus on modern styling techniques such as Flexbox and Grid Layout. Proficient in preprocessors like SASS/SCSS and CSS-in-JS libraries. Skilled in creating responsive designs and animations for a rich user experience.'
-  },
-  {
-    name: 'Python',
-    image: '/python-transparent.png',
-    icon: faPython,
-    description: 'Experienced in Python for a variety of applications including data analysis with Pandas and NumPy, machine learning with scikit-learn and TensorFlow, and web development with Django and Flask. Proficient in writing clean, efficient code and leveraging Python’s rich ecosystem of libraries and frameworks.'
-  },
+    category: "Backend & Tools",
+    items: [
+      { name: 'Node.js', icon: faNodeJs },
+      { name: 'Python', icon: faPython },
+      { name: 'Databases', icon: faDatabase },
+      { name: 'Git & Version Control', icon: faGitAlt },
+      { name: 'Data Visualization', icon: faCode }
+    ]
+  }
 ];
 
+
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+};
+
 const Skills = () => {
-  const [selectedSkill, setSelectedSkill] = useState(null);
-
-  const openModal = (skill) => {
-    setSelectedSkill(skill);
-  };
-
-  const closeModal = () => {
-    setSelectedSkill(null);
-  };
-
   return (
-    <section id="skills">
-      <h2>Skills</h2>
-      <div className="skills-list">
-        {skills.map((skill, index) => (
-          <div 
-            className={`skill-item ${skill.type === 'certification' ? 'certification-item' : ''}`} 
-            key={index}
-            onClick={() => openModal(skill)}
-          >
-            {skill.type === 'certification' ? (
-              <div className="certification-image-container">
-                <img src={skill.image} alt={skill.name} className="certification-image" />
+    <motion.section
+      id="skills"
+      className="skills-section"
+      initial="hidden"
+      animate="visible"
+      exit={{ opacity: 0 }}
+      variants={containerVariants}
+    >
+      <div className="container">
+        <motion.h2 variants={itemVariants}>Technical Skills</motion.h2>
+        <div className="skills-grid">
+          {displaySkills.map((category, idx) => (
+            <motion.div key={idx} className="skill-category" variants={itemVariants}>
+              <h3>{category.category}</h3>
+              <div className="skill-items">
+                {category.items.map((skill, index) => (
+                  <motion.div
+                    className="skill-card"
+                    key={index}
+                    whileHover={{ scale: 1.05, borderColor: "var(--primary-color)" }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <div className="skill-icon-wrapper">
+                      <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
+                    </div>
+                    <div className="skill-details">
+                      <span className="skill-name">{skill.name}</span>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-            ) : (
-              <div className="skill-image-container">
-                <img src={skill.image} alt={skill.name} className="skill-image" />
-              </div>
-            )}
-            <div className="skill-info">
-              {skill.icon ? (
-                <div className="skill-icon-container">
-                  <FontAwesomeIcon icon={skill.icon} className="skill-icon" />
-                </div>
-              ) : null}
-              <span className="skill-name">{skill.name}</span>
-            </div>
-          </div>
-        ))}
-      </div>
+            </motion.div>
+          ))}
+        </div>
 
-      <Modal
-        skill={selectedSkill}
-        onClose={closeModal}
-      />
-    </section>
+
+      </div>
+    </motion.section>
   );
 };
 
 export default Skills;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

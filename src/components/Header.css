@@ -1,117 +1,71 @@
-/* src/components/Header.css */
-.neumorphic-card {
-  /* Example neumorphic styles */
-  background: #e0e0e0;
-  border-radius: 10px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2),
-              -5px -5px 15px rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  margin: 10px;
+/* Header.css */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(15, 23, 42, 0.95);
+  /* var(--bg-primary) with opacity */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
 }
 
-nav h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+.custom-navbar {
+  padding: var(--spacing-md) 0;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 10px 0;
-}
-
-.neumorphic-button {
-  background: #f0f0f0;
-  border: none;
-  border-radius: 5px;
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2),
-              inset -5px -5px 10px rgba(255, 255, 255, 0.9);
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #333;
-  font-size: 1rem;
-  transition: background 0.3s, box-shadow 0.3s;
-}
-
-.neumorphic-button:hover {
-  background: #e0e0e0;
-  box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.2),
-              inset -3px -3px 7px rgba(255, 255, 255, 0.9);
-}
-
-/* Neumorphic Login Modal Styling */
-.login-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #e0e5ec; /* Light background for a neumorphic effect */
-  border-radius: 15px;
-  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2),
-              -8px -8px 15px rgba(255, 255, 255, 0.9); /* Neumorphic shadow */
-  padding: 2rem;
-  z-index: 10000; /* Ensure modal is above other content */
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* Login Form Styling */
-.login-modal h2 {
-  margin-top: 0;
+.brand-logo {
+  font-weight: 700;
   font-size: 1.5rem;
-  color: #333; /* Text color */
+  color: var(--text-primary) !important;
+  letter-spacing: -0.5px;
 }
 
-.login-modal form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.text-accent {
+  color: var(--text-accent);
 }
 
-/* Input Fields */
-.login-modal label {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.5rem;
-  color: #333; /* Text color */
+.nav-links .nav-link {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  font-weight: 500;
+  margin-left: 1rem;
+  transition: color var(--transition-fast);
+  position: relative;
 }
 
-.login-modal input {
-  padding: 0.5rem;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  background: #f9f9f9;
-  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1),
-              inset -3px -3px 6px rgba(255, 255, 255, 0.9); /* Neumorphic shadow */
+.nav-links .nav-link:hover,
+.nav-links .nav-link.active {
+  color: var(--text-primary) !important;
 }
 
-/* Buttons */
-.login-modal button {
-  padding: 0.5rem;
-  border: none;
-  border-radius: 10px;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2),
-              -5px -5px 15px rgba(255, 255, 255, 0.9); /* Neumorphic shadow */
+.nav-links .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transform: scaleX(1);
+  transition: transform var(--transition-fast);
 }
 
-.login-modal button:hover {
-  background-color: #0056b3;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2),
-              -3px -3px 10px rgba(255, 255, 255, 0.9); /* Neumorphic shadow */
+/* Icons in nav */
+.nav-links .fab {
+  font-size: 1.2rem;
 }
 
-.login-modal button[type="button"] {
-  background-color: #ccc;
+.nav-divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--border-color);
+  margin: 0 1rem;
+  align-self: center;
+  display: none;
 }
 
-.login-modal button[type="button"]:hover {
-  background-color: #aaa;
+@media (min-width: 992px) {
+  .nav-divider {
+    display: block;
+  }
 }

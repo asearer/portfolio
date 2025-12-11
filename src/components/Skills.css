@@ -1,140 +1,108 @@
-h2 {
+/* Skills.css */
+.skills-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--bg-primary);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.skill-category h3 {
   text-align: center;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-accent);
 }
 
-/* Container for the skills list */
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  padding: 20px;
-}
-
-/* Neumorphism styling for the skill items */
-.skill-item {
-  background: #e0e0e0;
-  border-radius: 15px;
-  box-shadow: 8px 8px 16px #b0b0b0, -8px -8px 16px #ffffff;
-  padding: 15px;
-  display: flex;
-  flex-direction: column; /* Stack image and text vertically */
-  align-items: center;
-  justify-content: center; /* Center content horizontally */
-  width: 150px;
-  height: 100px;
-  position: relative; /* To position the info pane */
-  overflow: hidden; /* Ensure the info pane is clipped to the item */
-  transition: box-shadow 0.3s ease;
-  cursor: pointer; /* Add a pointer cursor to indicate interactivity */
-}
-
-.skill-item:hover {
-  box-shadow: 4px 4px 8px #b0b0b0, -4px -4px 8px #ffffff;
-}
-
-/* Specific styling for certification items */
-.certification-item {
-  background: #e0e0e0;
-  border-radius: 15px;
-  box-shadow: 8px 8px 16px #b0b0b0, -8px -8px 16px #ffffff;
-  padding: 15px;
-  display: flex;
-  flex-direction: column; /* Stack image and text vertically */
-  align-items: center;
-  justify-content: center; /* Center content horizontally */
-  width: 200px; /* Increased width for larger images */
-  height: 200px; /* Increased height for larger images */
-  position: relative; /* To position the info pane */
-  overflow: hidden; /* Ensure the info pane is clipped to the item */
-  transition: box-shadow 0.3s ease;
-  cursor: pointer; /* Add a pointer cursor to indicate interactivity */
-}
-
-.certification-item:hover {
-  box-shadow: 4px 4px 8px #b0b0b0, -4px -4px 8px #ffffff;
-}
-
-/* Container for the certification image */
-.certification-image-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center; /* Center image horizontally */
-  align-items: center; /* Center image vertically */
-  overflow: hidden; /* Ensure no overflow */
-}
-
-/* Certification image styling */
-.certification-image {
-  width: 100%; /* Image takes up the full width of the container */
-  height: 100%; /* Image takes up the full height of the container */
-  object-fit: cover; /* Ensures the image covers the container, might crop */
-}
-
-/* Container for the skill image */
-.skill-image-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center; /* Center image horizontally */
-  align-items: center; /* Center image vertically */
-  overflow: hidden; /* Ensure no overflow */
-  border-radius: 15px; /* Optional: adds rounded corners to the container */
-}
-
-/* Skill image styling */
-.skill-image {
-  max-width: 100%; /* Ensures the image does not exceed the container's width */
-  max-height: 100%; /* Ensures the image does not exceed the container's height */
-  object-fit: contain; /* Ensures the image fits within the container while maintaining aspect ratio */
-}
-
-/* Container for the skill icon */
-.skill-icon-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-}
-
-/* Skill icon styling */
-.skill-icon {
-  font-size: 24px;
-}
-
-/* Container for the skill information pane */
-.skill-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 30%; /* Adjust height to fit remaining space */
-  background: #ffffff;
-  color: #333;
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transform: translateY(100%); /* Initially hide the info pane below the skill item */
-  transition: transform 0.3s ease; /* Smooth transition */
+.skill-items {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Center content vertically */
+  gap: var(--spacing-sm);
 }
 
-/* Show info pane on hover */
-.skill-item:hover .skill-info {
-  transform: translateY(0); /* Slide up to reveal */
+.skill-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.skill-card:hover {
+  transform: translateX(5px);
+  border-color: var(--primary-color);
+}
+
+.skill-icon-wrapper {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  width: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .skill-name {
-  font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
-.skill-description {
-  font-size: 14px;
-  margin-top: 5px;
+.section-title-secondary {
+  margin-top: var(--spacing-xl);
+}
+
+/* Certifications */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.certification-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  transition: transform var(--transition-fast);
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--spacing-sm);
+}
+
+.cert-header h4 {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.cert-date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.cert-institution {
+  color: var(--text-accent);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+}
+
+.cert-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
 }

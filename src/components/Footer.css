@@ -1,15 +1,15 @@
 /* Footer.css */
-.neumorphic-card {
-    background: #e0e5ec;
-    border-radius: 10px;
-    box-shadow: 8px 8px 15px #a3b1c6, -8px -8px 15px #ffffff;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  p {
-    margin: 0;
-    font-size: 14px;
-  }
-  
+.site-footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+  margin-top: auto;
+  /* Push to bottom if in flex container */
+}
+
+.site-footer p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.9rem;
+}

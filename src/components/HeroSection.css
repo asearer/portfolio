@@ -1,79 +1,215 @@
 /* HeroSection.css */
-
 .hero-section {
-  text-align: center;
-  padding: 50px;
-  background: #f0f0f0; /* Light gray background */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  min-height: 90vh;
+  padding: var(--spacing-xl) 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-section h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.hero-section p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-.contact-button {
-  background-color: #007bff;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-flex; /* Inline-flex for better alignment */
-  align-items: center; /* Centers text and icon vertically */
-  font-size: 16px;
-  margin: 5px 2px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.contact-button:hover {
-  background-color: #0056b3; /* Slightly darker shade of blue */
-}
-
-.contact-info {
-  margin-top: 20px;
-  font-size: 1.1em;
-  line-height: 1.6;
-  text-align: center; /* Center-align the text */
+.hero-container {
   display: flex;
-  flex-direction: column; /* Align items in a column */
-  gap: 8px; /* Adds space between each contact item */
+  flex-wrap: wrap;
+  align-items: center;
+  /* Use flex-start to keep elements together, rather than pushing apart */
+  justify-content: flex-start;
+  height: 100%;
+  /* Responsive gap: minimal space to bring them close */
+  gap: 8%;
 }
 
-.contact-info p {
+.hero-content {
+  /* Don't grow to fill all space, stick to content/basis */
+  flex: 0 1 600px;
+  min-width: 320px;
+  z-index: 2;
+  /* Removed padding-right to close gap */
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+}
+
+.highlight {
+  color: var(--primary-color);
+  -webkit-text-fill-color: var(--primary-color);
+  display: block;
+  margin-top: var(--spacing-sm);
+}
+
+.hero-subtitle {
+  font-size: 1.35rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.7;
+}
+
+.hero-actions {
   display: flex;
-  align-items: center; /* Aligns icons with text vertically */
-  justify-content: center; /* Centers the content horizontally */
-  margin: 10px 0;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
 }
 
-.contact-info a {
-  color: #007bff;
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 4px 14px 0 rgba(56, 189, 248, 0.39);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.23);
+  color: #fff;
   text-decoration: none;
 }
 
-.contact-info a:hover {
-  text-decoration: underline;
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-weight: 600;
+  transition: all var(--transition-fast);
 }
 
-.contact-info .fa-envelope,
-.contact-info .fa-phone,
-.contact-info .fa-linkedin,
-.contact-info .fa-twitter,
-.contact-info .fa-facebook {
-  margin-right: 8px; /* Adds space between icon and text */
+.btn-outline:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
+.social-links {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
 
+.social-links a {
+  font-size: 2rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
 
+.social-links a:hover {
+  color: var(--text-primary);
+  transform: translateY(-3px);
+}
 
+/* Background Decoration */
+.hero-visual {
+  /* Don't force growth, let it sit near text */
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-width: 300px;
+}
 
-  
+.profile-image-container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 2;
+  border: 4px solid var(--bg-primary);
+}
+
+.profile-glow-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--tertiary-color));
+  z-index: 1;
+  filter: blur(15px);
+  opacity: 0.5;
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(0.95);
+    opacity: 0.4;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    /* Standard gap on mobile vertical stack */
+  }
+
+  .hero-section {
+    height: auto;
+    padding-top: var(--spacing-lg);
+  }
+
+  .hero-content {
+    padding-right: 0;
+    text-align: center;
+    flex-basis: auto;
+    /* Reset flex basis for mobile */
+  }
+
+  .hero-visual {
+    margin-bottom: var(--spacing-md);
+    width: 100%;
+  }
+
+  .profile-image-container {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
+    margin: 0 auto var(--spacing-lg) auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}

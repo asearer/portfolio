@@ -1,126 +1,175 @@
-/* About Section Styling */
+/* About.css */
 .about-section {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-  text-align: center; /* Center text and inline elements */
-  background: #e0e0e0; /* Light background for contrast */
-  border-radius: 20px; /* Rounded corners for neumorphism */
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.8); /* Neumorphic shadow effect */
+  padding: var(--spacing-xl) 0;
+  min-height: 80vh;
 }
 
-/* Header Styling */
-.about-section h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Modal Button Styling */
-.modal-button {
-  background-color: #007bff; /* Keep the modern blue color */
-  border: none;
-  color: #fff;
-  padding: 12px 24px; /* Increased padding */
-  text-align: center;
-  text-decoration: none;
-  display: inline-flex; /* Inline-flex for text and icon alignment */
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  font-size: 16px;
-  border-radius: 12px; /* Rounded corners */
-  margin: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth color and shadow transitions */
-  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.9); /* Neumorphic shadow effect */
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
 }
 
-.modal-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.8); /* Darker shadow on hover */
+.about-text {
+  flex: 1;
+  min-width: 300px;
 }
 
-/* Modal Button Icon Styling */
-.modal-button .fa-download {
-  margin-right: 10px; /* Space between icon and text */
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
 }
 
-/* Modal Styling */
-.modal {
-  display: none; /* Hidden by default */
+.about-text p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+}
+
+.text-highlight {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.about-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+/* Education Section */
+.margin-top-lg {
+  margin-top: var(--spacing-xl);
+}
+
+.section-subtitle-left {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: var(--spacing-sm);
+  display: inline-block;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Single column for timeline-like feel implies prominence */
+  gap: var(--spacing-lg);
+}
+
+.education-card {
+  display: flex;
+  gap: var(--spacing-lg);
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+  align-items: flex-start;
+  transition: border-color var(--transition-normal);
+}
+
+.edu-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  background: rgba(56, 189, 248, 0.1);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.edu-content h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.edu-concentration {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-accent);
+  margin-bottom: 4px;
+}
+
+.edu-institution {
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.edu-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* Modal Styles (Kept from previous) */
+.modal-overlay {
   position: fixed;
-  z-index: 1000;
-  left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4); /* Slightly darker overlay */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 23, 42, 0.85);
+  /* bg-primary with opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  backdrop-filter: blur(5px);
 }
 
 .modal-content {
-  background-color: #f0f0f0; /* Light gray background for neumorphism */
-  margin: 10% auto; /* Center vertically and horizontally */
-  padding: 20px;
-  border: none; /* No border for neumorphism */
-  width: 90%; /* Responsive width */
-  max-width: 500px; /* Maximum width for larger screens */
-  border-radius: 20px; /* Rounded corners */
-  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.8); /* Neumorphic shadow effect */
-  animation: fadeIn 0.3s ease-in; /* Smooth fade-in */
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: var(--spacing-lg);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  text-align: center;
+  box-shadow: var(--shadow-glow);
 }
 
-.close {
-  color: #333; /* Darker close button color */
-  float: right;
-  font-size: 24px; /* Slightly smaller font size */
-  font-weight: bold;
-  transition: color 0.3s ease; /* Smooth color transition */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
 }
 
-.close:hover,
-.close:focus {
-  color: #000; /* Darker color on hover/focus */
-  text-decoration: none;
-  cursor: pointer;
+.modal-close:hover {
+  color: var(--text-primary);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    flex-direction: column;
+    gap: var(--spacing-md);
   }
-  to {
-    opacity: 1;
+
+  .edu-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
   }
 }
-
-/* Certification Cards Styling */
-.certification-card {
-  background-color: #f0f0f0; /* Light gray background for neumorphism */
-  border-radius: 20px; /* Rounded corners */
-  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.8); /* Neumorphic shadow effect */
-  padding: 20px;
-  margin: 15px 0; /* Space between cards */
-  text-align: left; /* Left-align text inside the card */
-}
-
-/* Experience Cards Styling */
-.experience-card {
-  background-color: #f0f0f0; /* Light gray background for neumorphism */
-  border-radius: 20px; /* Rounded corners */
-  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.8); /* Neumorphic shadow effect */
-  padding: 20px;
-  margin: 15px 0; /* Space between cards */
-  text-align: left; /* Left-align text inside the card */
-}
-
-.experience-card h4 {
-  margin-top: 0; /* Remove top margin for the card header */
-}
-
-.experience-card p {
-  margin: 5px 0; /* Margin between paragraphs */
-}
-
-
-
-

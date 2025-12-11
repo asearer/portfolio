@@ -1,47 +1,40 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Navbar, Nav, Button, Modal } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-import './Header.css'; 
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Header.css';
 
 const Header = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+    const location = useLocation();
 
-  const handleLoginClick = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
-  return (
-    <header className="neumorphic-card">
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand as={Link} to="/">asearerdev</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            {/* <Nav.Link as={Link} to="/">Home</Nav.Link> */}
-            <Nav.Link as={Link} to="/about">About</Nav.Link>
-            <Nav.Link as={Link} to="/skills">Skills</Nav.Link>
-            <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
-            <Nav.Link href="https://github.com/asearer" target="_blank" rel="noopener noreferrer">GitHub</Nav.Link>
-            <Nav.Link href="https://codepen.io/asearer" target="_blank" rel="noopener noreferrer">CodePen</Nav.Link>
-            
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-
-      
-    </header>
-  );
+    return (
+        <header className="site-header">
+            <Navbar expand="lg" variant="dark" className="custom-navbar">
+                <Container>
+                    <Navbar.Brand as={Link} to="/" className="brand-logo">
+                        <span className="text-accent">asearer</span>.dev
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ms-auto nav-links">
+                            <Nav.Link as={Link} to="/" active={location.pathname === '/'}>Home</Nav.Link>
+                            <Nav.Link as={Link} to="/about" active={location.pathname === '/about'}>About</Nav.Link>
+                            <Nav.Link as={Link} to="/skills" active={location.pathname === '/skills'}>Skills</Nav.Link>
+                            <Nav.Link as={Link} to="/languages" active={location.pathname === '/languages'}>Languages</Nav.Link>
+                            <Nav.Link as={Link} to="/projects" active={location.pathname === '/projects'}>Projects</Nav.Link>
+                            <div className="nav-divider"></div>
+                            <Nav.Link href="https://github.com/asearer" target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-github"></i>
+                            </Nav.Link>
+                            <Nav.Link href="https://codepen.io/asearer" target="_blank" rel="noopener noreferrer">
+                                <i className="fab fa-codepen"></i>
+                            </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </header>
+    );
 };
 
 export default Header;
-
-
-
-
-
-

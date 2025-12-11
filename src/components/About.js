@@ -1,124 +1,164 @@
-import React from 'react';
-import './About.css'; // Ensure this CSS file includes modal styles
-
-// Import FontAwesome icons
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import './About.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faTimes, faEnvelope, faGraduationCap, faCertificate } from '@fortawesome/free-solid-svg-icons';
+
+const educationData = [
+  {
+    degree: "Bachelor of Science in Computer Science",
+    concentration: "Concentration in Software Engineering",
+    institution: "Southern New Hampshire University (SNHU)",
+    year: "Present",
+    description: "Focusing on software development lifecycles, algorithms, and scalable architecture.",
+    type: "degree"
+  },
+  {
+    degree: "Software Engineering",
+    institution: "UMass Global",
+    year: "Feb 2024",
+    description: "Comprehensive software development lifecycle, from design to deployment.",
+    type: "certification"
+  },
+  {
+    degree: "Front End Development Libraries",
+    institution: "FreeCodeCamp",
+    year: "July 2024",
+    description: "Deep dive into React, Redux, and modern frontend architecture.",
+    type: "certification"
+  },
+  {
+    degree: "Data Visualization",
+    institution: "FreeCodeCamp",
+    year: "July 2024",
+    description: "Translating complex data into intuitive and actionable insights.",
+    type: "certification"
+  },
+  {
+    degree: "Responsive Web Design",
+    institution: "FreeCodeCamp",
+    year: "Sept 2023",
+    description: "Mastered the principles of ensuring seamless user experiences across various devices.",
+    type: "certification"
+  }
+];
 
 const About = () => {
-  const handleDownloadClick = () => {
-    const modal = document.getElementById('downloadModal');
-    modal.style.display = 'block';
-  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleCloseModal = () => {
-    const modal = document.getElementById('downloadModal');
-    modal.style.display = 'none';
-  };
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
-    <section className="about-section">
-      <h2>About Me</h2>
-      <button className="modal-button" onClick={handleDownloadClick}>
-        <FontAwesomeIcon icon={faDownload} /> Download Resume
-      </button>
+    <motion.section
+      className="about-section"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div className="container">
+        <div className="about-wrapper">
+          <div className="about-text">
+            <h2>About Me</h2>
+            <p>
+              I'm <span className="text-highlight">Alonza Searer</span>, a passionate software developer building the future of the web.
+            </p>
+            <p>
+              My journey in technology involves a continuous quest for learning and building responsive, scalable applications.
+              I combine academic rigor with practical, hands-on experience to create meaningful digital solutions.
+            </p>
+            <p>
+              When I'm not coding, I'm exploring data visualization techniques or diving into the latest web frameworks.
+            </p>
 
-      {/* Modal for download options */}
-      <div id="downloadModal" className="modal">
-        <div className="modal-content">
-          <span className="close" onClick={handleCloseModal}>
-            <FontAwesomeIcon icon={faTimes} />
-          </span>
-          <h2>Download Resume</h2>
-          <p>Select a format to download:</p>
-          <a
-            href="/Alonza_Searer_Resume.pdf"
-            download="Alonza_Searer_Resume.pdf"
-            className="modal-button"
-            onClick={handleCloseModal}
-          >
-            <FontAwesomeIcon icon={faDownload} /> Download PDF
-          </a>
-          <a
-            href="/Alonza_Searer_Resume.docx"
-            download="Alonza_Searer_Resume.docx"
-            className="modal-button"
-            onClick={handleCloseModal}
-          >
-            <FontAwesomeIcon icon={faDownload} /> Download DOCX
-          </a>
+            <div className="about-actions">
+              <motion.button
+                className="btn-primary"
+                onClick={openModal}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FontAwesomeIcon icon={faDownload} /> Resume
+              </motion.button>
+              <motion.a
+                href="mailto:asearerdev@gmail.com"
+                className="btn-outline"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FontAwesomeIcon icon={faEnvelope} /> Contact
+              </motion.a>
+            </div>
+          </div>
         </div>
+
+        <motion.div
+          id="education"
+          className="education-section margin-top-lg"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <h3 className="section-subtitle-left">Education & Certifications</h3>
+          <div className="education-grid">
+            {educationData.map((edu, index) => (
+              <motion.div
+                className="education-card"
+                key={index}
+                whileHover={{ y: -5, borderColor: "var(--primary-color)" }}
+              >
+                <div className="edu-icon">
+                  <FontAwesomeIcon icon={edu.type === 'certification' ? faCertificate : faGraduationCap} />
+                </div>
+                <div className="edu-content">
+                  <h4>{edu.degree}</h4>
+                  {edu.concentration && <span className="edu-concentration">{edu.concentration}</span>}
+                  <p className="edu-institution">{edu.institution}</p>
+                  <p className="edu-desc">{edu.description}</p>
+                  <span className="edu-year">{edu.year}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
 
-      <div className="about-me">
-        <p>
-          I'm Alonza Searer, and I am a passionate software developer with a diverse background in web development and data analysis. My journey in technology has been both dynamic and rewarding, marked by a continuous quest for learning and professional growth. Currently, I am pursuing a Bachelor’s degree in Computer Science with a concentration in Software Engineering at Southern New Hampshire University (SNHU). This academic endeavor is allowing me to deepen my understanding of software development principles and gain hands-on experience with advanced technologies.
-        </p>
-      </div>
-
-      <h3>Certifications</h3>
-      <div className="certification-card">
-        <h4>Responsive Web Design</h4>
-        <p><strong>Date Acquired:</strong> September 2023</p>
-        <p><strong>Institution:</strong> FreeCodeCamp</p>
-        <p><strong>Overview:</strong> Mastered responsive design techniques and best practices, including media queries, Flexbox, and Grid Layout. Proficient in creating flexible, mobile-first websites that adapt seamlessly to various screen sizes.</p>
-      </div>
-
-      <div className="certification-card">
-        <h4>Software Engineering</h4>
-        <p><strong>Date Acquired:</strong> February 2024</p>
-        <p><strong>Institution:</strong> UMass Global Software Engineering Bootcamp</p>
-        <p><strong>Overview:</strong> Acquired comprehensive software engineering skills, including project management, software development methodologies, and advanced programming techniques. Gained hands-on experience in designing, developing, and deploying scalable software solutions.</p>
-      </div>
-
-      <div className="certification-card">
-        <h4>Data Visualization</h4>
-        <p><strong>Date Acquired:</strong> July 2024</p>
-        <p><strong>Institution:</strong> FreeCodeCamp</p>
-        <p><strong>Overview:</strong> Specialized in transforming complex data into clear, insightful visualizations using tools like D3.js and Python libraries. Developed the ability to communicate data-driven insights effectively through charts, graphs, and interactive dashboards.</p>
-      </div>
-
-      <div className="certification-card">
-        <h4>Front-End Development Libraries</h4>
-        <p><strong>Date Acquired:</strong> July 2024</p>
-        <p><strong>Institution:</strong> FreeCodeCamp</p>
-        <p><strong>Overview:</strong> Explored modern front-end libraries and frameworks, including React, Angular, and Vue.js. Enhanced skills in building dynamic, interactive web applications with efficient state management and reusable components.</p>
-      </div>
-
-      <h3>Experience Highlights</h3>
-      <div className="experience-card">
-        <h4>Responsive Web Design</h4>
-        <p>Designed and implemented responsive web interfaces, ensuring optimal user experiences across devices.</p>
-      </div>
-
-      <div className="experience-card">
-        <h4>Software Engineering</h4>
-        <p>Developed robust software solutions with a focus on scalability, maintainability, and performance.</p>
-      </div>
-
-      <div className="experience-card">
-        <h4>Data Visualization</h4>
-        <p>Created compelling visual stories from data, facilitating informed decision-making.</p>
-      </div>
-
-      <div className="experience-card">
-        <h4>Front-End Development Libraries</h4>
-        <p>Leveraged advanced front-end technologies to build high-performance web applications.</p>
-      </div>
-    </section>
+      {/* Resume Modal */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            className="modal-overlay"
+            onClick={closeModal}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="modal-content"
+              onClick={(e) => e.stopPropagation()}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+            >
+              <button className="modal-close" onClick={closeModal}>
+                <FontAwesomeIcon icon={faTimes} />
+              </button>
+              <h3>Download Resume</h3>
+              <div className="modal-actions">
+                <a href="/Alonza_Searer_Resume.pdf" download className="btn-primary" onClick={closeModal}>
+                  PDF Format
+                </a>
+                <a href="/Alonza_Searer_Resume.docx" download className="btn-outline" onClick={closeModal}>
+                  Word Format
+                </a>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.section>
   );
 };
 
 export default About;
-
-
-
-
-
-
-
-
-
-
-
-

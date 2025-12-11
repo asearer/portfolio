@@ -1,0 +1,53 @@
+/* Languages.css */
+.languages-section {
+    padding: var(--spacing-xl) 0;
+    min-height: 80vh;
+}
+
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.language-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(30, 41, 59, 0.4);
+    /* Secondary bg with transparency */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    text-decoration: none;
+    transition: background-color var(--transition-fast);
+    height: 100%;
+    aspect-ratio: 1;
+    /* Square cards */
+}
+
+.language-card:hover {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon-wrapper {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-md);
+    transition: transform var(--transition-normal);
+}
+
+.language-card:hover .icon-wrapper {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px currentColor);
+}
+
+.language-name {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
